@@ -1,145 +1,94 @@
-# 19 Testing: Tech Quiz Test Suite
+# Tech Quiz Test Suite
 
-## Your Task
+## Project Summary
 
-Your assignment this week underscores the importance of ensuring reliability and robustness in modern web applications through comprehensive testing. In today's dynamic development environment, testing is not just an afterthought but a critical part of the development process that ensures applications meet user demands and perform efficiently under various conditions.
+The **Tech Quiz Test Suite** is a comprehensive testing implementation for a **MERN stack-based Tech Quiz application**. This project focuses on integrating **Cypress** for **component** and **end-to-end (E2E) testing**, ensuring the application's reliability, functionality, and user experience. 
 
-This week, you'll take the starter codebase of a fully functioning Tech Quiz application and enhance it by adding Cypress for both component and end-to-end tests. The app was built using the MERN stack with a React front end, MongoDB database, and Node.js/Express.js server and API. It allows users to take a quiz of ten random questions and view their final score.
+The Tech Quiz app allows users to test their knowledge through a quiz consisting of **ten random questions**, displaying the final score at the end. The testing suite ensures that the application's core functionality—such as starting a quiz, progressing through questions, and displaying the final score—is fully validated and works correctly across different environments.
 
-To complete the assignment, you’ll need to do the following:
+The primary objective of this project is to:
+- Introduce **automated testing** to a real-world MERN stack application.
+- Utilize **Cypress** for component and E2E testing.
+- Ensure the quiz application behaves as expected under various conditions.
+- Enhance **developer confidence** by preventing regressions and breaking changes.
 
-1. Install Cypress as a dev dependency
+By implementing thorough test coverage, this project demonstrates the importance of **modern software testing** in web applications, helping developers ship reliable and bug-free applications efficiently.
 
-2. Configure Cypress for both component and end-to-end testing
+## Table of Contents
 
-3. Create a component test for the quiz component
+- [Usage](#usage)
+- [Mock-Up](#mock-up)
+- [Instructions](#instructions)
+- [Key Features](#key-features)
+- [Technology Stack](#technology-stack)
+- [Additional Resources](#additional-resources)
 
-4. Create an end-to-test for the quiz component
+## Usage
 
-## User Story
+To run the application and execute tests, use the following commands:
 
-```md
-AS AN aspiring developer
-I WANT to take a tech quiz
-SO THAT I can test my knowledge and improve my skills
-```
+### 1. Install Dependencies:
+    npm install
 
-## Acceptance Criteria
+### 2. Run Cypress Tests:
+    npm run test
 
-```md
-GIVEN I am taking a tech quiz
-WHEN I click the start button
-THEN the quiz starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN all questions are answered
-THEN the quiz is over
-WHEN the quiz is over
-THEN I can view my score
-WHEN the quiz is over
-THEN I can start a new quiz
-```
-
-## Mock-Up
+## Mock Up
 
 The following animation demonstrates the application functionality:
 
 ![A GIF demonstrates a functioning quiz.](./assets/19-testing-homework-demo.gif)
 
-## Getting Started
+## Instructions
 
-This Challenge combines many of the skills we've covered so far. In addition to the user story and acceptance criteria, we’ve provided some guidelines to help you get started.
+### 1. Setup and Installation:
 
-Because this Challenge requires a video submission, refer to the [Full-Stack Blog video submission guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) for guidance on creating and sharing a video.
+- Clone this repository.
+- Ensure Node.js and MongoDB are installed on your system.
+- Configure the required environment variables through a `.env` file.
+- Run `npm install` to install all dependencies.
 
-**Important**: You won't need to modify code for the existing application. In this challenge, you'll only be creating tests for the existing application.
+### 2. Running the Application:
 
-Your testing should use [Cypress](https://docs.cypress.io/guides/overview/why-cypress) to run both the component tests and the end-to-end tests. The testing will be invoked using the following command:
+- Start the development server using `npm run start:dev`
+- Open the application in a browser.
+- Begin the quiz and answer the questions to test your knowledge.
 
-```bash
-npm run test
-```
+### 3. Running Cypress Tests:
 
-It's recommended that you start with a directory structure that looks like the following example:
+- Open Cypress with npx cypress open and choose the desired test type.
+- Run all tests via `npm run test`
 
-```md
-.
-├── client/                 // the client application
-├── cypress/                // Folder for Cypress
-    ├── component/          // Folder for component tests
-        └── Quiz.cy.jsx     // Component tests for the Quiz component
-    ├── e2e/                // Folder for end-to-end tests
-        └── quiz.cy.js      // End-to-end tests for the Tech Quiz
-    ├── fixtures/           // Folder for test fixtures
-        └── questions.json  // Mock data for testing
-    └── tsconfig.json
-├── server/                 // the server application
-├── .gitignore
-├── cypress.config.ts       // Runs the application using imports from lib/
-├── package.json
-├── tsconfig.json
-└── README.md              // App description, link to video, setup and usage instructions           
-```
+## Key Features
 
-**Note**: The server for this application requires environment variables to function properly. You'll need to rename the `.env.example` file to `.env`.
+* **Cypress Component Testing:** Ensures individual quiz components function correctly.
 
-## Grading Requirements
+* **End-to-End Testing:** Validates the entire quiz flow, from start to finish.
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it's considered incomplete and won't count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+* **Automated Test Execution:** Run tests efficiently using a single command.
 
-This Challenge is graded based on the following criteria:
+* **Reliable MERN Stack Application:** The quiz app integrates MongoDB, Express.js, React, and Node.js.
 
-### Deliverables: 15%
+* **Error Prevention:** Helps catch potential bugs before deployment.
 
-* Your GitHub repository must contain the application code as well as the configuration and tests using Cypress.
+* **Developer Confidence:** Ensures updates and modifications do not break existing functionality.
 
-### Walkthrough Video: 32%
+## Technology Stack
 
-* A walkthrough video that demonstrates the component and end-to-end tests running and passing must be submitted.
+- **MongoDB** - Stores quiz questions and user scores.
 
-* The `README.md` file must include a link to the walkthrough video.
+- **Express.js** - Manages server-side logic and API endpoints.
 
-* The walkthrough video must show all tests passing from the command line.
+- **React** - Handles the front-end user interface.
 
-* The walkthrough video must demonstrate how a user would invoke the application from the command line.
+- **Node.js** - Provides the runtime environment for the backend.
 
-### Technical Acceptance Criteria: 40%
+- **Cypress** - Automates testing for both components and full user workflows.
 
-* Your submission should satisfy all of the preceding acceptance criteria in addition to the following:
+## Additional Resources
 
-  * You must use the [Cypress package](https://www.npmjs.com/package/cypress).
+- Cypress Documentation: [Why Cypress?](https://docs.cypress.io/guides/overview/why-cypress)
 
-  * The application must have a component test for the quiz component.
+- Walkthrough Video: [Link to walkthrough video]()
 
-  * The application must have an end-to-end test for the quiz component.
-
-### Repository Quality: 13%
-
-* Your repository has a unique name.
-
-* Your repository follows the best practices for file structure and naming conventions.
-
-* Your repository follows the best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Your repository contains multiple descriptive commit messages.
-
-* Your repository contains a high-quality README with a description and a link to your walkthrough video.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* A walkthrough video that demonstrates the functionality of the application and the application successfully passing tests.
-
-* The URL of your GitHub repository, which should have a unique name and include a README describing the project.
-
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+- GitHub Repository: [gilmerperez/tech-quiz-test-suite](https://github.com/gilmerperez/tech-quiz-test-suite)
