@@ -1,8 +1,8 @@
 import Quiz from "../../client/src/components/Quiz";
 
 describe("Quiz Component", () => {
+  // Before each test begins, intercept with the mock question from the questions.json file
   beforeEach(() => {
-    // Intercept with mock question
     cy.intercept(
       {
         method: "GET",
