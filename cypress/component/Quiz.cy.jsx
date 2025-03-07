@@ -1,23 +1,19 @@
 import Quiz from "../../client/src/components/Quiz";
 
-describe("Quiz Component", () => {
+describe("Quiz Component Test", () => {
   // Before each test begins
   beforeEach(() => {
-    cy.intercept( // Intercept with the mock question
-      {
-        method: "GET",
-        url: "/api/questions/random",
-      },
-      {
-        fixture: "questions.json", // From the questions.json file
-        statusCode: 200,
-      }
+    // Loads quiz component
+    cy.mount(<Quiz />);
+    // Intercept with the mock question
+    cy.intercept(
+      { method: "GET", url: "/api/questions/random" },
+      // From the questions.json file
+      { fixture: "questions.json", statusCode: 200 }
     ).as("getRandomQuestion");
   });
 
   it("should start the quiz and display the first question", () => {
-    // Loads quiz component
-    cy.mount(<Quiz />);
     // Selects "Start Quiz" button
     cy.get("button").contains("Start Quiz").click();
     // Quiz card should be visible
@@ -27,8 +23,6 @@ describe("Quiz Component", () => {
   });
 
   it("should answer questions and complete the quiz", () => {
-    // Loads quiz component
-    cy.mount(<Quiz />);
     // Selects "Start Quiz" button
     cy.get("button").contains("Start Quiz").click();
     // Select answer that has "1" in it (The correct answer)
@@ -38,8 +32,6 @@ describe("Quiz Component", () => {
   });
 
   it("should restart the quiz after completion", () => {
-    // Loads quiz component
-    cy.mount(<Quiz />);
     // Selects "Start Quiz" button
     cy.get("button").contains("Start Quiz").click();
     // Answer questions
