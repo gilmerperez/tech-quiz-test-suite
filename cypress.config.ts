@@ -3,12 +3,12 @@ import viteConfig from './vite.config';
 
 export default defineConfig({
   component: {
+    port: 3001,
     devServer: {
       framework: 'react',
       bundler: 'vite',
       viteConfig,
     },
-    port: 3001,
   },
 
   e2e: {
