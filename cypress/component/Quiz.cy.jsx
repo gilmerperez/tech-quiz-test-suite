@@ -1,15 +1,15 @@
 import Quiz from "../../client/src/components/Quiz";
 
 describe("Quiz Component", () => {
-  // Before each test begins, intercept with the mock question from the questions.json file
+  // Before each test begins
   beforeEach(() => {
-    cy.intercept(
+    cy.intercept( // Intercept with the mock question
       {
         method: "GET",
         url: "/api/questions/random",
       },
       {
-        fixture: "questions.json",
+        fixture: "questions.json", // From the questions.json file
         statusCode: 200,
       }
     ).as("getRandomQuestion");
