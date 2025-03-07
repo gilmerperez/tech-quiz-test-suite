@@ -45,3 +45,4 @@ describe("Quiz E2E Test", () => {
     cy.get("h2").should("not.be.empty");
   });
 });
+
