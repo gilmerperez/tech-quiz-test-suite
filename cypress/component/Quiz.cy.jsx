@@ -2,7 +2,7 @@ import Quiz from "../../client/src/components/Quiz";
 
 describe("Quiz Component", () => {
   beforeEach(() => {
-    // Intercept with mock questions
+    // Intercept with mock question
     cy.intercept(
       {
         method: "GET",
@@ -22,6 +22,7 @@ describe("Quiz Component", () => {
     cy.get("button").contains("Start Quiz").click();
     // Quiz card should be visible
     cy.get(".card").should("be.visible");
+    // Heading should have text displayed
     cy.get("h2").should("not.be.empty");
   });
 
@@ -30,7 +31,7 @@ describe("Quiz Component", () => {
     cy.mount(<Quiz />);
     // Selects "Start Quiz" button
     cy.get("button").contains("Start Quiz").click();
-    // Answer questions
+    // Select answer that has "1" in it (The correct answer)
     cy.get("button").contains("1").click();
     // Verify quiz completion
     cy.get(".alert-success").should("be.visible").and("contain", "Your score");
@@ -47,6 +48,7 @@ describe("Quiz Component", () => {
     cy.get("button").contains("Take New Quiz").click();
     // Verify the quiz is restarted
     cy.get(".card").should("be.visible");
+    // Heading should have text displayed
     cy.get("h2").should("not.be.empty");
   });
 });
