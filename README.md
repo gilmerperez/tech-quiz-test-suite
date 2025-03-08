@@ -56,39 +56,30 @@ The following animation demonstrates the application functionality:
 
 ### 3. Running Cypress Tests:
 
-- Open Cypress with npx cypress open and choose the desired test type.
 - Run all tests via `npm run test`
+- Open Cypress with `npm run test-gui` and choose the desired test type.
 
 ## Key Features
 
-* **Cypress Component Testing:** Ensures individual quiz components function correctly.
-
-* **End-to-End Testing:** Validates the entire quiz flow, from start to finish.
-
-* **Automated Test Execution:** Run tests efficiently using a single command.
-
-* **Reliable MERN Stack Application:** The quiz app integrates MongoDB, Express.js, React, and Node.js.
-
-* **Error Prevention:** Helps catch potential bugs before deployment.
-
-* **Developer Confidence:** Ensures updates and modifications do not break existing functionality.
+- **Error Prevention:** Helps catch potential bugs before deployment.
+- **End-to-End Testing:** Validates the entire quiz flow, from start to finish.
+- **Automated Test Execution:** Run tests efficiently using a single command.
+- **Cypress Component Testing:** Ensures individual quiz components function correctly.
+- **Developer Confidence:** Ensures updates and modifications do not break existing functionality.
+- **Reliable MERN Stack Application:** The quiz app integrates MongoDB, Express.js, React, and Node.js.
 
 ## Technology Stack
 
-- **MongoDB** - Stores quiz questions and user scores.
-
-- **Express.js** - Manages server-side logic and API endpoints.
-
 - **React** - Handles the front-end user interface.
-
+- **MongoDB** - Stores quiz questions and user scores.
+- **Express.js** - Manages server-side logic and API endpoints.
 - **Node.js** - Provides the runtime environment for the backend.
-
 - **Cypress** - Automates testing for both components and full user workflows.
 
 ## Additional Resources
 
 - Cypress Documentation: [Why Cypress?](https://docs.cypress.io/guides/overview/why-cypress)
 
-- Walkthrough Video: [Link to walkthrough video]()
+- Walkthrough Video: [Link to walkthrough video](https://drive.google.com/file/d/1ODSSQphiidSkOy172h4EN_9BvyfU_7oI/view?usp=sharing)
 
 - GitHub Repository: [gilmerperez/tech-quiz-test-suite](https://github.com/gilmerperez/tech-quiz-test-suite)
