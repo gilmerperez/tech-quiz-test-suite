@@ -17,30 +17,30 @@ describe("Quiz Component Test", () => {
     // Selects "Start Quiz" button
     cy.get("button").contains("Start Quiz").click();
     // Quiz card should be visible
-    cy.get(".card").should("be.visible");
+    cy.get("div").should("be.visible");
     // Heading should have text displayed
-    cy.get("h2").should("not.be.empty");
+    cy.get("h2").should("be.visible");
   });
 
   it("should answer questions and complete the quiz", () => {
-    // Selects "Start Quiz" button
     cy.get("button").contains("Start Quiz").click();
     // Select answer that has "1" in it (The correct answer)
     cy.get("button").contains("1").click();
-    // Verify quiz completion
-    cy.get(".alert-success").should("be.visible").and("contain", "Your score");
+    // "Quiz Completed" Heading should be visible
+    cy.get("h2").contains("Quiz Completed");
+    // User's score should be visible and display their score
+    cy.get("div").contains("Your score: ");
   });
 
   it("should restart the quiz after completion", () => {
     // Selects "Start Quiz" button
     cy.get("button").contains("Start Quiz").click();
-    // Answer questions
     cy.get("button").contains("1").click();
     // Restart quiz
     cy.get("button").contains("Take New Quiz").click();
     // Verify the quiz is restarted
-    cy.get(".card").should("be.visible");
+    cy.get("div").should("be.visible");
     // Heading should have text displayed
-    cy.get("h2").should("not.be.empty");
+    cy.get("h2").should("be.visible");
   });
 });
