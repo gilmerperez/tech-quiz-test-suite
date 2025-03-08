@@ -33,7 +33,6 @@ describe("Quiz Component Test", () => {
   });
 
   it("should restart the quiz after completion", () => {
-    // Selects "Start Quiz" button
     cy.get("button").contains("Start Quiz").click();
     cy.get("button").contains("1").click();
     // Restart quiz
