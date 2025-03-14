@@ -1,6 +1,6 @@
 # Tech Quiz Test Suite
 
-## Project Summary
+## Project Overview
 
 The **Tech Quiz Test Suite** is a comprehensive testing implementation for a **MERN stack-based Tech Quiz application**. This project focuses on integrating **Cypress** for **component** and **end-to-end (E2E) testing**, ensuring the application's reliability, functionality, and user experience. 
 
@@ -27,11 +27,17 @@ By implementing thorough test coverage, this project demonstrates the importance
 
 To run the application and execute tests, use the following commands:
 
-### 1. Install Dependencies:
-    npm install
+### 1. Install Dependencies
 
-### 2. Run Cypress Tests:
-    npm run test
+```bash
+npm install
+```
+
+### 2. Run Cypress Tests
+
+```bash
+npm run test
+```
 
 ## Mock Up
 
@@ -41,21 +47,18 @@ The following animation demonstrates the application functionality:
 
 ## Instructions
 
-### 1. Setup and Installation:
-
+### 1. Setup and Installation
 - Clone this repository.
 - Ensure Node.js and MongoDB are installed on your system.
 - Configure the required environment variables through a `.env` file.
 - Run `npm install` to install all dependencies.
 
-### 2. Running the Application:
-
+### 2. Running the Application
 - Start the development server using `npm run start:dev`
 - Open the application in a browser.
 - Begin the quiz and answer the questions to test your knowledge.
 
-### 3. Running Cypress Tests:
-
+### 3. Running Cypress Tests
 - Run all tests via `npm run test`
 - Open Cypress with `npm run test-gui` and choose the desired test type.
 
@@ -78,8 +81,4 @@ The following animation demonstrates the application functionality:
 
 ## Additional Resources
 
-- Cypress Documentation: [Why Cypress?](https://docs.cypress.io/guides/overview/why-cypress)
-
-- Walkthrough Video: [Link to walkthrough video](https://drive.google.com/file/d/1ODSSQphiidSkOy172h4EN_9BvyfU_7oI/view?usp=sharing)
-
-- GitHub Repository: [gilmerperez/tech-quiz-test-suite](https://github.com/gilmerperez/tech-quiz-test-suite)
+Cypress Documentation: [Why Cypress?](https://docs.cypress.io/guides/overview/why-cypress)
